@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./stye.css" rel="stylesheet">
+    <link rel="icon" href="./icon.png">
+    <title>Love Machine</title>
+</head>
+<script src="./main.js"></script>
+<body>
+    <h1>Will you find Love?</h1>
+    <main>
+        <div class="name">
+            <p>First Name</p>
+            <input type="text" class="name1">
+        </div>
+        <div class="heart">
+            <img src="./Heart-image.png" onclick="calculate(
+                document.querySelector('.name1').value, 
+                document.querySelector('.name2').value)">
+            <h2></h2>
+        </div>
+
+        <div class="name">
+            <p>Second Name</p>
+            <input type="text" class="name2">
+        </div>
+    </main>
+</body>
+</html>

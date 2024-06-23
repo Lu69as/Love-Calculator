@@ -1,0 +1,91 @@
+body {
+    background: rgb(204, 145, 155);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: .05vw;
+    color: rgb(75, 55, 58);
+    font-size: 1.2vw;
+
+    & h1 {margin: 10vh 0 0 0; color: rgb(139, 12, 12);}
+
+    & main {
+        margin-top: -5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+
+        .name {
+            display: flex;
+            flex-direction: column;
+            margin-inline: 5vw;
+
+            & input {
+                width: 15vw;
+                height: 5vh;
+                background: rgba(255, 0, 0, 0.2);
+                color: rgb(124, 0, 108);
+                border: none;
+                border-radius: .5vw;
+                font-size: 75%;
+                text-align: center;
+            }
+        }
+
+        .heart {
+            position: relative;
+            width: 20vw;
+            cursor: pointer;
+            scale: 1.00001;
+            transition: 1200ms;
+
+            &:hover {
+                scale: 1.075;
+                transition: 800ms;
+            }
+            & img {
+                width: 100%;
+            }
+            & h2 {
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -130%);
+                transition: 800ms;
+                scale: 1.00001;
+            }
+        }
+
+        .heart-beat {
+            animation-name: heart-beat;
+            animation-duration: 5s;
+
+            &:hover {scale: 1.00001}
+        }
+    }
+}
+
+@keyframes heart-beat {
+    0% {
+        scale: 1.00001;
+    }
+    15% {
+        scale: 1.4;
+    }
+    30% {
+        scale: 1.05;
+    }
+    50% {
+        scale: 1.75;
+    }
+    65% {
+        scale: 1.2;
+    }
+    80% {
+        scale: 5;
+    }
+    100% {
+        scale: 1.00001;
+    }
+}
